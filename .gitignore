@@ -87,3 +87,50 @@ pythonenv*
 /clang/utils/analyzer/projects/*/RefScanBuildResults
 # automodapi puts generated documentation files here.
 /lldb/docs/python_api/
+
+
+# ==========================================
+# LLVM 编译产物屏蔽
+# ==========================================
+
+# 屏蔽构建目录 (假设你的构建文件夹叫 build 或 target)
+/build/
+/target/
+/out/
+
+# 屏蔽 CMake 自动生成的缓存和临时文件
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# 屏蔽编译出的二进制文件和库
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.lib
+*.dll
+*.exp
+*.pdb
+*.ild
+*.ilk
+
+# 屏蔽 LLVM TableGen 自动生成的 .inc 文件 (这些是中间产物，不应提交)
+*.inc
+*.gen
+
+# 屏蔽 Python 缓存
+__pycache__/
+*.pyc
+
+# 屏蔽编辑器/系统临时文件
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.patch
